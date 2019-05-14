@@ -1,0 +1,189 @@
+
+<!doctype html>
+<title>JS_Practice</title>
+
+<p>Testing grounds for JS Functions</p>
+
+<hr>
+<p id="demo">Array Numbers</p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+/*Given an array with multiple values, 
+write a function that returns a new array that only contains the maximum, minimum, and average values of the original array*/
+// Step 1) Determine max, min, avg from array  Step 2) Create a new array that contains only those values
+// Expected return  max = 37, min = -40   avg
+arr = [1,5,10,-2];
+var i;
+var sum=0;
+var average=0;
+var arrnew=[];
+var max=0;
+var min=0;
+
+//Step 1
+document.getElementById("demo").innerHTML=arr;
+
+
+for(i=0;i<arr.length;i++)
+{
+    console.log(sum=sum+arr[i]);
+    console.log(arr[i]>=max);
+    console.log(arr[i]<=arr[i]);
+}
+
+
+</script>
+
+
+<!--THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE--Negatives
+<script>
+//Given an array with multiple values, write a function that replaces any negative numbers within the array with the value of 0. 
+// Step 1)  Is the value <0?   Step 2) Replace the value
+arr = [-40,-2,2,3,4,5,37];
+var i;
+document.getElementById("demo").innerHTML=arr;
+
+for(i=0;i<arr.length;i++)
+{
+    if(arr[i]<0)
+    {
+        arr[i]=0;
+    }
+}
+document.getElementById("demo").innerHTML=arr;
+
+</script>-->
+
+
+<!--  THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE-- Greater Than Y
+<script>
+//Given value of Y, write a function that takes an array and returns the number of values that are greater than Y.
+//Step 1) Identify if array value is greater than y using IF statement Step 2) total the number of #s greater than y 
+
+var arr = [2,3,4,5,37];
+var count=0;
+var y=5;
+var i;
+arr.push(41);
+document.getElementById("demo").innerHTML=arr2;
+
+for(i=0;i<arr.length;i++)
+{
+// Step 1)
+if(arr[i]>y)
+{
+// Step 2)
+    count++
+
+}
+}-->
+
+
+
+
+<!--  THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE-- Squares
+<script>
+//Square each value and then replace it in the array  Step 1) Square each value Step) Replace the value
+var arr = [2,3,4,5,37];
+var i;
+document.getElementById("demo").innerHTML=arr;
+
+for(i=0;i<arr.length;i++)
+{
+    //Step 1    Square each value  Step 2) is already completed because you're saying arr[i] is set to the square
+console.log(arr[i]=arr[i]*arr[i]);
+ 
+    }
+
+</script>-->
+
+<!--  THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE-- Find Average
+<script>
+    //find average   Step 1) sum of all numbers Step 2) count of all numbers  Step 3) 1 is divided by 3
+    var arr = [2,3,4,5,37];
+    var sum=0;
+    document.getElementById("demo").innerHTML=arr;
+    
+    // Step 1
+    for(i=0;i<arr.length;i++)
+    {
+    console.log(sum=sum+arr[i]);
+    }
+
+    // Step 2
+    console.log(arr.length);
+    
+    // Step 3
+    console.log(sum/arr.length);
+    document.getElementById("demo3").innerHTML="Average of array elements = "+ (sum/arr.length);
+    
+</script>  -->
+        
+
+
+
+
+<!--  THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE-- Iterate an array
+<script>
+var arr = [2,3,4,5,37];
+var sum=0;
+
+
+for(i=0;i<arr.length;i++)
+{
+    console.log(sum=sum+arr[i]);
+    }
+
+document.getElementById("demo").innerHTML=arr;
+
+</script>-->
+
+
+
+<!--  THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE-- Array Odd
+<script>
+var arr = [-1,2,3,4,5,37];
+var arrnew=[];
+document.getElementById("demo").innerHTML=arr;
+
+for(var i=0;i<arr.length;i++)
+{
+    if(arr[i]%2===1)
+    {
+        console.log(arr[i]);
+        arrnew.push(arr[i]);
+        document.getElementById("demo2").innerHTML=arrnew;
+        //console.log(arrnew.push(arr[i]));
+    }   
+    
+}
+</script>-->
+
+
+
+
+
+<!--  THIS IS A WORKING BLOCK OF CODE USED FOR ALGO.CHALLENGE-- SWAP VALUES
+
+    <script> 
+var arr = [-1,2,3,4,5,37];
+var first=arr[0];
+var last=arr[arr.length-1];
+document.getElementById("demo").innerHTML=arr;
+arr[0] = arr[arr.length-1]
+document.getElementById("demo").innerHTML=arr;
+arr[arr.length-1]= first;
+document.getElementById("demo").innerHTML=arr;
+
+</script>-->  
+
+
+
+
+
+
+
+
+</html>

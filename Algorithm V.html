@@ -1,0 +1,102 @@
+<!doctype html>
+
+<head>
+    <title>Algorithm V</title>
+</head>
+
+<body>
+    <p id="practice">Test</p>
+
+
+    <script>
+        //Number 1
+
+
+        // var array=[1,2,-1,-3];
+
+        // function resetNegatives(array){
+        // //   console.log(array);
+        //   for(i=0;i<array.length;i++){
+        //     if(array[i]<0){
+
+        //       array[i]=0;
+        //     }
+        //   }
+        // }
+        // resetNegatives(array);
+        // console.log(array);
+
+        //Number 2
+
+        var array=[1,2,3];
+
+        function moveForward(array){
+          for(i=0;i<=array.length;i++){
+            if(i==array.length){
+              array[array.length-1]=0;
+              console.log(array);
+            }
+            else{
+              array[i]=array[i+1];
+            }
+          }
+        }
+        moveForward(array);
+        console.log(array);
+
+
+        //Number 3
+
+        // var array=[1,2,3]
+
+        // function returnReversed(array){
+        //   for(i=0;i<array.length;i++){
+        //     if(i==array.length-2)
+        //     {
+        //       break;
+        //     }
+        //     else{
+        //     var temp = 0;
+        //     // temp = array[array.length-1];
+        //     temp = array[i];
+        //     array[i]=array[array.length-1];
+        //     array[array.length-1]=temp;
+        //     }
+        //   }
+        // }
+        // returnReversed(array);
+        // console.log(array);
+
+        //Number 4
+
+        // duplicate each value twice, and add to the array
+        // array[0]
+        // store all vals temporarily 
+        //expected [4,4,"Ulysses","Ullyses",42,42,false]
+
+        // 1) set the original array to temp
+
+
+        // var array = [4, "Ulysses", 42, false]
+        // var arraynew= [];
+
+        // function duplicate(){
+        //     //duplicate each value
+        //     //push to new array
+
+        //     var arraytemp=array;
+
+        //     for(var i=0;i<array.length;i++){
+        //         arraynew.push(array[i],arraytemp[i])
+        //         console.log(arraynew)
+        //     }
+
+        // }
+        // duplicate(array);
+
+
+
+
+
+    </script>
+</body>
