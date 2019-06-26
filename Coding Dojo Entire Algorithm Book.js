@@ -244,8 +244,33 @@
 // }
 // printLowReturnHigh([5, 1, 23, 3, 2, 5])
 
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
+// Print One, Return Another...  //////////////////////////////////////////
+
+// function printLowReturnHigh(arr) {
+//     console.log(arr[arr.length-2])
+
+//     var odd;
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 ==1) {
+//            odd = arr[i];
+//            console.log("odd", odd)
+//            return odd; 
+//         }
+//     }
+// }
+// printLowReturnHigh([7, 1, 23, 3, 2, 5])
+
+// Double Vision...  //////////////////////////////////////////
+
+// function double(arr){
+//     var newArr = [];
+//     for(var i = 0; i < arr.length; i++){
+//         newArr.push(arr[i]*2);
+//     }
+//     return newArr;
+// }
+// console.log(double([1,2,3]));
+
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
