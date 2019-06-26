@@ -153,29 +153,77 @@
 
 // Values Greater Than Second, Generalized...  //////////////////////////////////////////
 
-
-function gtrThanSec(arr){
-    var newArr = [];
-    if(arr.length <= 1){
-        return "Not long enough";
-    }
-    for(var i = 0; i < arr.length; i++){
-        if(arr[i] > arr[1]){
-            newArr.push(arr[i])
-        }
-    }
-    return newArr.length;
-}
-console.log(gtrThanSec([1,3,5,7,9,13]));
-console.log(gtrThanSec([1]));
+// function gtrThanSec(arr){
+//     var newArr = [];
+//     if(arr.length <= 1){
+//         return "Not long enough";
+//     }
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i] > arr[1]){
+//             newArr.push(arr[i])
+//         }
+//     }
+//     return newArr.length;
+// }
+// console.log(gtrThanSec([1,3,5,7,9,13]));
+// console.log(gtrThanSec([1]));
 
 
 // This Length, That Value...  //////////////////////////////////////////
 
-function lenVal(){
+// function lenVal(num1, num2){
+//     var arr = [];
+//     for(var i = 0; i < num1; i++){
+//         arr.push(num2);
+//     }
+//     console.log(arr);
+//     return arr;
+// }
+// lenVal(4,5);
 
-}
-lenVal();
+// Fit the First Value...  //////////////////////////////////////////
+
+// function fitFirstVal(arr){
+//     if(arr[0] > arr.length){
+//         return "Too Big";
+//     } else if (arr[0] < arr.length){
+//         return "Too small";
+//     } else{
+//         return "Just rightt";
+//     }
+// }
+// console.log(fitFirstVal([1,3,2,2,1]));
+// console.log(fitFirstVal([30,3,2,2,1]));
+// console.log(fitFirstVal([5,3,2,2,1]));
+
+// Farenheit to Celsius...  //////////////////////////////////////////
+
+// function fToC(farenheit){
+//     // farenheit = (9/5 * Celsius) + 32;
+//     var celsius = (farenheit - 32)/1.8
+//     return celsius;
+// }
+// console.log(fToC(75));
+
+// Celsius to Farenheit...  //////////////////////////////////////////
+
+// function cToF(celsius){
+//     var farenheit = (9/5 * celsius) + 32;
+//     return farenheit;
+// }
+// console.log(cToF(100));
+
+// Biggie Size...  //////////////////////////////////////////
+
+// function biggie(arr) {
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0) {
+//             arr[i] = "big";
+//         }
+//     }
+//     return arr;
+// }
+// console.log(biggie([-1, 3, 5, -5]));
 
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
@@ -186,7 +234,28 @@ lenVal();
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
+
+
+
+// Chatper 2 - Fundamentals, Part II //////////////////////////////////////////
+// Chatper 3 - Arrays //////////////////////////////////////////
+// Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
+// Chatper 5 - Linked Lists  //////////////////////////////////////////
+// Chatper 6 - Queues and Stacks  //////////////////////////////////////////
+// Chatper 7 - Arrays, Part II  //////////////////////////////////////////
+// Chatper 8 - Linked Lists, Part II  //////////////////////////////////////////
+// Chatper 9 - Recursion  //////////////////////////////////////////
+// Chatper 10 - Strings, Part II  //////////////////////////////////////////
+// Chatper 11 - Trees  //////////////////////////////////////////
+// Chatper 12 - Sorts  //////////////////////////////////////////
+// Chatper 13 - Set and Priority Queues  //////////////////////////////////////////
+// Chatper 14 - Hashes  //////////////////////////////////////////
+// Chatper 15 - Trees, Part II  //////////////////////////////////////////
+// Chatper 16 - Tries  //////////////////////////////////////////
+// Chatper 17 - Graphs  //////////////////////////////////////////
+// Chatper 18 - Bit Arithmetic  //////////////////////////////////////////
+// Chatper 19 - Trees, Part III  //////////////////////////////////////////
+// Chatper 20 - Spacial, Logic, Estimation  //////////////////////////////////////////
+// Chatper 21 - Optimization  //////////////////////////////////////////
+
+
