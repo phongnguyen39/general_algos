@@ -136,6 +136,57 @@
 // firstPlusLength([3,42,1,-1]);
 // firstPlusLength(["yippi",42,1,-1]);  // this will concatenate the string with the length of the array
 
-// Valeus Greater than Second...  //////////////////////////////////////////
+// Values Greater than Second...  //////////////////////////////////////////
+
+// var arr = [1,3,5,7,9,13]
+
+// function gtrThanSec(arr){
+//     var count = 0;
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i] > arr[1]){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(gtrThanSec(arr));
+
+// Values Greater Than Second, Generalized...  //////////////////////////////////////////
+
+
+function gtrThanSec(arr){
+    var newArr = [];
+    if(arr.length <= 1){
+        return "Not long enough";
+    }
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] > arr[1]){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr.length;
+}
+console.log(gtrThanSec([1,3,5,7,9,13]));
+console.log(gtrThanSec([1]));
+
+
+// This Length, That Value...  //////////////////////////////////////////
+
+function lenVal(){
+
+}
+lenVal();
+
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
+// The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
