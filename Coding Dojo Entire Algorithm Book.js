@@ -225,7 +225,25 @@
 // }
 // console.log(biggie([-1, 3, 5, -5]));
 
-// The Final Countdown...  //////////////////////////////////////////
+// Print Low, Return High...  //////////////////////////////////////////
+
+// function printLowReturnHigh(arr) {
+//     var low = arr[0];
+//     var high = arr[0];
+//     for (var i = 0; i < arr.length; i++) {
+//         if (arr[i] < low) {
+//             low = arr[i];
+//             console.log(low)
+//         }
+//         if (arr[i] > high) {
+//             high = arr[i];
+//             console.log(high)
+//         }
+//     }
+//     return high;
+// }
+// printLowReturnHigh([5, 1, 23, 3, 2, 5])
+
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
 // The Final Countdown...  //////////////////////////////////////////
