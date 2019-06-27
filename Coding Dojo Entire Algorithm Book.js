@@ -449,20 +449,118 @@
 // }
 // mathHelp(2,1,15);
 
-// Swap Toward the Center...  //////////////////////////////////////////
-// Swap Toward the Center...  //////////////////////////////////////////
-// Swap Toward the Center...  //////////////////////////////////////////
-// Swap Toward the Center...  //////////////////////////////////////////
+// Poor Kenny...  //////////////////////////////////////////
+
+// function whatHappensToday(days){
+//     var volcanos = days * .1;
+//     var tsunamis = days * .15;
+//     var earthquakes = days * .2;
+//     var blizzards = days * .25;
+//     var meteors = days * .3;
+//     var outcome = ("Vol:  " + volcanos + " Tsu:  " + tsunamis + " Eart:  " + earthquakes + " Bliz:  " + blizzards + " Met:  " + meteors)
+//     console.log(outcome)
+
+// }
+// whatHappensToday(100);
+// whatHappensToday(1);
+
+// What Really Happened...  //////////////////////////////////////////
+
+// Come back **********************/////////////////////////////////
+// function whatHappensToday(days){
+//     var volcanos = days * .1;
+//     var tsunamis = days * .15;
+//     var earthquakes = days * .2;
+//     var blizzards = days * .25;
+//     var meteors = days * .3;
+//     var outcome = ("Vol:  " + volcanos + " Tsu:  " + tsunamis + " Eart:  " + earthquakes + " Bliz:  " + blizzards + " Met:  " + meteors)
+//     console.log(outcome)
+
+// }
+// whatHappensToday(100);
+// whatHappensToday(1);
+
+// Soaring IQ...  //////////////////////////////////////////
+// Letter Grade...  //////////////////////////////////////////
+// More Accurate Grades...  //////////////////////////////////////////
 
 
+// come back to page 34
 
+// Sigma...  //////////////////////////////////////////
 
+// function sigma(num){
+//     var output = 0;
+//     for(var i = 1; i <= num; i++){
+//         output += i;
+//     }
+//     return output
+// }
+// console.log(sigma(3));
+// console.log(sigma(5));
 
+// Factorial //////////////////////////////////////////
 
+// function factorial(num){
+//     var output = 1;
+//     for (var i = 1; i <= num; i++){
+//         output *= i;
+//     }
+//     return output;
+// }
+// console.log(factorial(3));
+// console.log(factorial(5));
 
-
+// Star Art //////////////////////////////////////////
+// Character Art //////////////////////////////////////////
 
 // Chatper 3 - Arrays //////////////////////////////////////////
+
+// Three and Fives  //////////////////////////////////////////
+
+// function threesFives(){
+//     var output = 0;
+//     for(var i = 100; i<= 4000000; i++ ){
+//         // if( i % 3 == 0 || i % 5 == 0  ){  /// come back, unsure about solution
+//         if( i % 3 == 0 || i % 5 == 0 && i % 3 == 0  && i % 5 == 0 ){   
+//             output += i;
+//         }
+//     }
+//     return output;
+// }
+// console.log(threesFives());
+
+// Generate Coin Challenge   //////////////////////////////////////////
+// Messy Math Mashup  //////////////////////////////////////////
+// Twelve-Bar Blues   //////////////////////////////////////////
+
+// function twelveBlues(){
+
+//     // come back ////////////////////////
+//     // at multiple of 5 put an integer
+//     // multiple of 2 put chck
+//     // at multiple of 3 put boom      
+
+//     for (var i = 1; i <=13; i++){
+//         if(i % 5 == 0 ){
+//             console.log(i)
+//         }
+//         else if (i % 4 ==0 || i % 2 == 0){
+//             console.log("chick")
+//         }
+//         else if(i % 3 == 0){
+//             console.log("boom")
+//         }
+//         else{
+//             console.log();
+//         }
+//     }
+// }
+// twelveBlues();  // expected  // 1, "chick", "boom", "chick", 2, "chick", "boom", "chick" ... to 12
+
+// Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
+
+
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
 // Chatper 5 - Linked Lists  //////////////////////////////////////////
 // Chatper 6 - Queues and Stacks  //////////////////////////////////////////
