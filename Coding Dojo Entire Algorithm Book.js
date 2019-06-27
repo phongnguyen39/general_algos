@@ -3,7 +3,9 @@
 // Version 1.1.7
 // Published May 8, 2017
 
-// Preface, I skipped passed the foundational assignments to focus on areas that I warranted further practice or understanding. All problems will have a page and chapter reference.  TO VIEW THE OUTPUT OF EACH ASSIGNMENT, SIMPLY UNCOMMENT THAT SECTION OF CODE
+// Preface, I skipped passed the foundational assignments to focus on areas that I warranted further practice or understanding. All problems will have a page and chapter reference.  
+// TO VIEW THE OUTPUT OF EACH ASSIGNMENT, SIMPLY UNCOMMENT THAT SECTION OF CODE
+// Ctrl+F "Come back" for uncompleted assignments
 
 // Chapter 1 - Fundamentals //////////////////////////////////////////
 
@@ -271,12 +273,132 @@
 // }
 // console.log(double([1,2,3]));
 
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
-// The Final Countdown...  //////////////////////////////////////////
+// Count Positives...  //////////////////////////////////////////
+
+// function countPositive(arr){
+//     var count = 0;
+//     for(var i = 0; i<arr.length; i++){
+//         if(arr[i] > 0){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(countPositive([-1,1,1,1]));
+
+// Even and Odds...  //////////////////////////////////////////
+
+/* COME BACK TO MEEEEEEE *******************************************************/
+// function evenOdd(arr){
+//     var count = 0;
+//     for(var i = 0; i<arr.length; i++){
+//         if(arr[i] > 0){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(evenOdd([1,3,6,5])); // expected "Nada"
+// console.log(evenOdd([1,3,5,6])); // expected "That's odd!"
+// console.log(evenOdd([1,3,5,7])); // expected "Even more so!"
+
+// Increment the Seconds...  //////////////////////////////////////////
+
+// function incrSeconds(arr){
+//     // incr +1 odd elements
+//     for(var i = 0; i< arr.length; i++){
+//         if(i%2 == 1){
+//             arr[i]++
+//         }
+//     }
+//     return arr;
+// }
+// console.log(incrSeconds([1,23,2,5,6]));
+
+// Previous Lengths...  //////////////////////////////////////////
+
+// function prevLen(arr){
+//     for(var i = 0; i < arr.length; i++){
+//         if(typeof(arr[i]) === 'string'){
+//             arr[i] = arr[i].length;
+//         }
+//     }
+//     return arr;
+// }
+// console.log(prevLen(["Coding","Dojo",2,"Rocks","My","Socks"]));
+
+// Add Seven to Most...  //////////////////////////////////////////
+
+// function seven(arr){
+//     var newArr = [];
+//     for(var i = 0; i < arr.length ; i++ ){
+//         if(i == 0){
+//             newArr.push(arr[i]);
+//             continue;
+//         } else {
+//             newArr.push(arr[i]+7);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(seven([1,2,23,2,1]));
+
+// Reverse Array...  //////////////////////////////////////////
+
+// function revArr(arr){
+
+//     for(var i = 0; i < arr.length/2; i++){
+//         var temp = arr[i];
+//         arr[i] = arr[arr.length-1-i]
+//         arr[arr.length-1-i] = temp;
+//     }
+//     return arr;
+// }
+// console.log(revArr([3,1,6,4,2]))  // expected output [2,4,6,1,3]
+
+// Outlook: Negative...  //////////////////////////////////////////
+
+// function outlookNeg(arr){
+//     var newArr = [];
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i] > 0){
+//             arr[i] *= -1;
+//         }
+//         newArr.push(arr[i])
+//     }
+//     return newArr;
+// }
+// console.log(outlookNeg([1,-3,5]));
+
+// Always Hungry...  //////////////////////////////////////////
+
+// function hungry(arr){
+//     for(var i = 0 ; i < arr.length ; i++){
+//         if(arr[i] === "food"){
+//             console.log("yummy")
+//             return "yummy";
+//         }
+//         else{
+//             console.log("I'm hungry")
+//         }
+//     }
+// }
+// hungry(["Coding","Dojo","food"]);
+// hungry(["Coding","Dojo","rocks"]);
+
+// Swap Toward the Center...  //////////////////////////////////////////
+
+
+
+// Scale the Array...  //////////////////////////////////////////
+
+// function scale(num, arr){
+//     for(var i = 0; i < arr.length; i++){
+//         arr[i] = arr[i] * num;
+//     }
+//     return arr;
+// }
+// console.log(scale(3, [1,2,3,15]));
 
 
 
