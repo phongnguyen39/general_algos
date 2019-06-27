@@ -388,7 +388,19 @@
 
 // Swap Toward the Center...  //////////////////////////////////////////
 
+// Come back **********************/////////////////////////////////
+// function swapCenter(arr){
+//     for(var i = 0; i < arr.length; i++){
+//         var temp = arr[i];
+//         arr[i] = arr[arr.length-1-i]
+//         arr[arr.length-1-i] = temp;
+//     }
+//     console.log(arr)
+//     return arr;
 
+// }
+// swapCenter([1,2,3,4,5,6]);  //expected [6,2,4,3,5,1]
+// swapCenter([true,42,"Ada",2,"pizza"]) // expected ["pizza",42,"Ada",2,true]
 
 // Scale the Array...  //////////////////////////////////////////
 
@@ -403,6 +415,53 @@
 
 
 // Chatper 2 - Fundamentals, Part II //////////////////////////////////////////
+
+// Only Keep the Last Few...  //////////////////////////////////////////
+
+// Come back **********************/////////////////////////////////
+// function lastFew(x,arr){
+//     // iterate twice, 5 - 3 = 2   arr.length - x   5 - 3 -1 = 
+
+//     // arr.length 5
+//     // # of iterations  = arr.length - 1 
+//     // x, the remainder of arr.length
+
+//     for(var i = 0; i < arr.length + x ; i++){
+//         arr.shift();
+//         console.log(x, i, arr)
+//     }
+//     return arr;
+
+// }
+// lastFew(3,[2,4,6,8,10]); // expected [6,8,10]
+// // lastFew(1,[2,4,6,8,10]); // expected [10]
+
+// Math Help...  //////////////////////////////////////////
+
+// function mathHelp(num1, num2, num3){
+//     var m = num1;
+//     var b = num2;
+//     var y = num3;
+//     var x = (y-b)/m;
+//     // solve for x;
+//     console.log(x);
+//     return x;
+// }
+// mathHelp(2,1,15);
+
+// Swap Toward the Center...  //////////////////////////////////////////
+// Swap Toward the Center...  //////////////////////////////////////////
+// Swap Toward the Center...  //////////////////////////////////////////
+// Swap Toward the Center...  //////////////////////////////////////////
+
+
+
+
+
+
+
+
+
 // Chatper 3 - Arrays //////////////////////////////////////////
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
 // Chatper 5 - Linked Lists  //////////////////////////////////////////
