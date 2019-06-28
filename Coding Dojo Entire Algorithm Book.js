@@ -558,10 +558,53 @@
 // }
 // twelveBlues();  // expected  // 1, "chick", "boom", "chick", 2, "chick", "boom", "chick" ... to 12
 
+// Fibonnaci  //////////////////////////////////////////
+
+ // Characteristics of fib:
+    // each number is the sum of the previous two
+    // start with values 0 and 1
+    // each function only accepts one argument
+    // this is solved by recursion as opposed to loops.  Recursions are O(2^5) potentially
+    //https://medium.com/quick-code/fibonacci-sequence-javascript-interview-question-iterative-and-recursive-solutions-6a0346d24053
+
+    // fib(0) = 0;
+    // fib(1) = 1;
+    // fib(2) = 1;  // fib(0) + fib(1)
+    // fib(3) = 2; // fib(2) + fib(1)
+    // fib(4) = 3; // fib(3) + fib(2)
+    // fib(5) = 5; // fib(4) + fib(3)
+    // fib(6) = 8; // fib(5) + fib(4)
+    // fib(7) = 13; // fib(6) + fib(5)
+
+// function fib(n){
+   
+    
+//     if(n < 2){
+//         return n;
+//     }
+//     var output = fib(n-1) + fib(n-2);
+    
+//     return output;
+// }
+// console.log(fib(0));
+// console.log(fib(7));
+
+// Sum to One Digit  //////////////////////////////////////////
+
+// Come back********
+
+// sumToOne(928) // expected 9+2+8 = 19 => 1 + 9 = 10 => 1 + 0 = 1
+
+// function sumToOne(num){
+//     parseInt()
+// }
+// sumToOne();
+
+// Clock Hand Angles  //////////////////////////////////////////
+// Is Prime  //////////////////////////////////////////
+
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
 
-
-// Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
 // Chatper 5 - Linked Lists  //////////////////////////////////////////
 // Chatper 6 - Queues and Stacks  //////////////////////////////////////////
 // Chatper 7 - Arrays, Part II  //////////////////////////////////////////
