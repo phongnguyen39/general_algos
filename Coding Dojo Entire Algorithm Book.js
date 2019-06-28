@@ -632,6 +632,22 @@
 
 // Clock Hand Angles, Revisited  //////////////////////////////////////////
 
+// come back *******
+
+// Extract-o-matic  //////////////////////////////////////////
+
+// come back ******
+
+// function moduloExtract(num, digitNum){
+//     // 100 here is three digits
+//     var placeValue = {"zero": 0, "one": 1, "tens": 10}
+
+//     digitNum = 10 * digitNum  
+//     if()
+//     return Math.floor(num / digitNum) % 10;
+// }
+// console.log(moduloExtract(32768, 3));
+
 
 // Chatper 3 - Arrays //////////////////////////////////////////
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
