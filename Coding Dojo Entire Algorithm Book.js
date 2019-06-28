@@ -514,7 +514,7 @@
 // Star Art //////////////////////////////////////////
 // Character Art //////////////////////////////////////////
 
-// Chatper 3 - Arrays //////////////////////////////////////////
+
 
 // Three and Fives  //////////////////////////////////////////
 
@@ -603,8 +603,38 @@
 // Clock Hand Angles  //////////////////////////////////////////
 // Is Prime  //////////////////////////////////////////
 
-// Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
+// Rockin' The Dojo Sweatshirt  //////////////////////////////////////////
 
+// function sweatShirt(n){
+//     var cost = 20;
+//     var items = n;
+
+//     if(items == 2){
+//         discount = .09;
+//         return Math.ceil(items * cost * discount);
+//     } 
+//     else if( items == 3){
+//         discount = .19;
+//         return Math.ceil(items * cost  * discount);
+//     }
+//     else if( items >= 4 ){
+//         discount = .35;
+//         return Math.ceil(items * cost * discount);
+//     }
+//     else{
+//         return items * cost;
+//     }
+// }
+// console.log(sweatShirt(1));
+// console.log(sweatShirt(2));
+// console.log(sweatShirt(3));
+// console.log(sweatShirt(4));
+
+// Clock Hand Angles, Revisited  //////////////////////////////////////////
+
+
+// Chatper 3 - Arrays //////////////////////////////////////////
+// Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
 // Chatper 5 - Linked Lists  //////////////////////////////////////////
 // Chatper 6 - Queues and Stacks  //////////////////////////////////////////
 // Chatper 7 - Arrays, Part II  //////////////////////////////////////////
