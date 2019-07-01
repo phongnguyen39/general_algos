@@ -34,7 +34,24 @@
 // }
 // console.log(removeDups([-1,0,1,2,1]))
 
-// using for loop
 
+// Linked List //////////////////////////////////////////////
 
-// Arrays //////////////////////////////////////////////
+// 6. How do you find the length of a singly linked list?
+
+// Create the SLL
+
+function SLL(){
+    this.head = null;
+}
+console.log(SLL());
+
+// var x = new SLL();
+// console.log(x);
+
+function Node(val){
+    this.head = val;
+    this.next = null;
+    return;
+}
+console.log(Node(2));
