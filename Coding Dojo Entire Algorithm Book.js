@@ -648,6 +648,16 @@
 // }
 // console.log(moduloExtract(32768, 3));
 
+// Significant Digits  //////////////////////////////////////////
+
+// come back *******
+
+// function sigDig(n){
+//     var output;
+
+//     return output;
+// }
+// console.log(sigDig(12345));
 
 // Chatper 3 - Arrays //////////////////////////////////////////
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
