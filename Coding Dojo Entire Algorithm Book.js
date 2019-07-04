@@ -648,7 +648,7 @@
 // }
 // console.log(moduloExtract(32768, 3));
 
-// Significant Digits  //////////////////////////////////////////
+// Most Significant Digit  //////////////////////////////////////////
 
 // come back *******
 
@@ -658,6 +658,102 @@
 //     return output;
 // }
 // console.log(sigDig(12345));
+
+// Gaming Fun(damentals) //////////////////////////////////////////
+
+// function gamingFun(num){
+
+// }
+// console.log(gamingFun());
+
+function rollOne(){
+    var oneRoll = Math.ceil(Math.random()*6)
+    return oneRoll;
+}
+
+// function playFives(num){
+//     for(var i = 0; i < num; i++){
+//         var output = rollOne();
+//         console.log(output);
+//         if (output ==5){
+//             console.log("That's good luck")
+//         }
+//     }
+//     return output;
+// }
+// // playFives(5);
+
+// function playStatistics(){
+//     var i = 1;
+//     var min = i;
+//     var max = i;
+    
+//     for( i ; i<=8; i++){
+        
+//         var output = rollOne();
+//         if(output <= min){
+//             min = output;   
+//         } 
+//         else if( output >= max) {
+//             max = output;
+//         }
+//         if( i == 8){
+
+//             return min + " "+ max 
+//         }
+//     }
+// }
+// console.log(playStatistics());
+
+function playStatistics2(){
+    var i = 1;
+    var min = i;
+    var max = i;
+    var sum = 0;
+    
+    for( i ; i<=8; i++){
+        
+        var output = rollOne();
+        sum += output;
+        if(output <= min){
+            min = output;   
+        } 
+        else if( output >= max) {
+            max = output;
+        }
+        if( i == 8){
+
+            return "max : " + min + " min: "+ max + " sum: " + sum;
+        }
+    }
+}
+console.log(playStatistics2());
+
+function playStatistics3(){
+    var i = 1;
+    var min = i;
+    var max = i;
+    var sum = 0;
+    
+    for( i ; i<=8; i++){
+        
+        var output = rollOne();
+        sum += output;
+        if(output <= min){
+            min = output;   
+        } 
+        else if( output >= max) {
+            max = output;
+        }
+        if( i == 8){
+
+            return "max : " + min + " min: "+ max + " sum: " + sum;
+        }
+    }
+}
+console.log(playStatistics3());
+
+
 
 // Chatper 3 - Arrays //////////////////////////////////////////
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
