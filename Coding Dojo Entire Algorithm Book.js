@@ -705,57 +705,97 @@ function rollOne(){
 // }
 // console.log(playStatistics());
 
-function playStatistics2(){
-    var i = 1;
-    var min = i;
-    var max = i;
-    var sum = 0;
+// function playStatistics2(){
+//     var i = 1;
+//     var min = i;
+//     var max = i;
+//     var sum = 0;
     
-    for( i ; i<=8; i++){
+//     for( i ; i<=8; i++){
         
-        var output = rollOne();
-        sum += output;
-        if(output <= min){
-            min = output;   
-        } 
-        else if( output >= max) {
-            max = output;
-        }
-        if( i == 8){
+//         var output = rollOne();
+//         sum += output;
+//         if(output <= min){
+//             min = output;   
+//         } 
+//         else if( output >= max) {
+//             max = output;
+//         }
+//         if( i == 8){
 
-            return "max : " + min + " min: "+ max + " sum: " + sum;
-        }
-    }
-}
-console.log(playStatistics2());
+//             return "max : " + min + " min: "+ max + " sum: " + sum;
+//         }
+//     }
+// }
+// console.log(playStatistics2());
 
-function playStatistics3(){
-    var i = 1;
-    var min = i;
-    var max = i;
-    var sum = 0;
+// function playStatistics3(n){
+//     var i = 1;
+//     var min = i;
+//     var max = i;
+//     var sum = 0;
     
-    for( i ; i<=8; i++){
+//     for( i ; i<=n; i++){
+//         var output = rollOne();
+//         sum += output;
+//         if(output <= min){
+//             min = output;   
+//         } 
+//         else if( output >= max) {
+//             max = output;
+//         }
+//         if( i == n){
+//             return "max : " + min + " min: "+ max + " sum: " + sum;
+//         }
+//     }
+// }
+// console.log(playStatistics3(1)); // added a parameter here
+// console.log(playStatistics3(100)); // added a parameter here
+
+// function playStatistics4(n){
+//     var i = 1;
+//     var min = i;
+//     var max = i;
+//     var sum = 0;
+    
+    
+    
+//     for( i ; i<=n; i++){
+//         var output = rollOne();
+//         sum += output;
+//         if(output <= min){
+//             min = output;   
+//         } 
+//         else if( output >= max) {
+//             max = output;
+//         }
+//         if( i == n){
+//             var avg = sum / n; 
+//             return "max : " + min + " min: "+ max + " avg: " + avg;
+//         }
+//     }
+// }
+// console.log(playStatistics4(1)); // added a parameter here
+// console.log(playStatistics4(100)); // added a parameter here
+
+// Statistics Until Doubles  //////////////////////////////////////////
+
+function statDoubles(){
+
+    // special note about Math.floor in conjunction with Math.random.  Floor is used here because Math.ceil(0) = 0, while Math.floor(0)+1 = 1.  In reality, a die would not return 0
+    // source:  https://teamtreehouse.com/community/why-do-you-floor-1-instead-of-ceil-the-mathrandom-value
+    
+    // if two consecutive rolls occurs then we stop
+    var rolls, min, max, avg, output;
+
+    for( var i = 1; ; )
+        Math.floor(Math.random()*20)+1;
         
-        var output = rollOne();
-        sum += output;
-        if(output <= min){
-            min = output;   
-        } 
-        else if( output >= max) {
-            max = output;
-        }
-        if( i == 8){
-
-            return "max : " + min + " min: "+ max + " sum: " + sum;
-        }
-    }
+    return 
 }
-console.log(playStatistics3());
+console.log(statDoubles());
 
-
-
-// Chatper 3 - Arrays //////////////////////////////////////////
+// Chapter 3 - Arrays //////////////////////////////////////////
 // Chatper 4 - Strings and Associative Arrays  //////////////////////////////////////////
 // Chatper 5 - Linked Lists  //////////////////////////////////////////
 // Chatper 6 - Queues and Stacks  //////////////////////////////////////////
