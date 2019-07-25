@@ -1,0 +1,28 @@
+// personal attempt at selection sort
+
+function selectionSort(arr) {
+
+
+  // outer loop does the swapping of elements
+  for (let i = 0; i < arr.length; i++) {
+    let min = i;
+    let temp = arr[i];
+
+    // inner loop does the comparison.  More importantly: it compares the min value and traverses it along the array;
+    for (let j = i + 1; j < arr.length; j++) {
+
+      // Compares next value with current lowest value, arr[min].  If arr[j] is the lower of the two then it becomes the new min
+      if(arr[j] < arr[min]){
+        min = j;
+      }
+    }
+
+    // This is where the swapping actually happens.  Remember j & min may have swapped;
+    arr[i] = arr[min];
+    arr[min] = temp;
+
+  }
+  return arr;
+}
+
+selectionSort([99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]);
