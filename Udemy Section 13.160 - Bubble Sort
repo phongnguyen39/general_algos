@@ -1,0 +1,31 @@
+// Bubble Sort
+
+function bubbleSort(arr) {
+
+  // let i = 0;
+
+  // While loop doesn't work here because eventually there are two values that are in the correct order
+  // while (arr[i] > arr[i + 1]) {
+  //   console.log(arr[i],arr[i + 1])
+  //   console.log(arr[i] > arr[i + 1])
+  //   let temp = arr[i];
+  //   arr[i] = arr[i + 1];
+  //   arr[i + 1] = temp;
+  //   console.log(i)
+  //   i++;
+  // }
+  //  console.log(arr)
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(i, j)
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  console.log(arr)
+}
+bubbleSort([6, 5, 3, 1, 8, 7, 2, 4])
