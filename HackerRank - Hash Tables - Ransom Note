@@ -1,0 +1,55 @@
+// Constraints
+// words are case sensitive
+// only whole words
+// no substrings or concat
+
+// two artifacts:  a magazine and a ransom note
+// we will use the magazine to replicate ransom note
+
+// print 'yes' if we can replicate, no otherwise
+// "Attack at dawn" != "attack at dawn" no
+
+// we've split the strings into array elements
+// add magazine array elements to the hash table using a for loop
+// check the note array elements against the hash table
+// add a condition, if all array elements match then print yes
+
+function checkMagazine(magazine, note) {
+  let dict = {}
+  let magSplit = magazine;
+  let noteSplit = note;
+  let count = 0;
+
+  for (let i = 0; i < magSplit.length; i++) {
+    if (dict[magSplit[i]]) {
+      dict[magSplit[i]] += 1
+    } else {
+      dict[magSplit[i]] = 1;
+    }
+  }
+
+  console.log(dict)
+
+  // we need to decrement the dict if key has been found
+  // if value is zero then return no
+  for (let j = 0; j < noteSplit.length; j++) {
+    if (dict[noteSplit[j]] == 0 || dict[noteSplit[j]] == null) {
+      continue;
+    } else {
+      dict[noteSplit[j]]--;
+      count++
+    }
+  }
+  console.log(dict)
+
+  if (count == noteSplit.length) {
+    console.log("Yes")
+  } else {
+    console.log("No")
+  }
+
+
+}
+// checkMagazine(['give','me','one','grand','today','night'], ['give','one','grand','today']); 
+checkMagazine(['two','times','three','is','not','four'], ['two','times','two','is','four'])
+
