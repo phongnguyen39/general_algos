@@ -1,0 +1,103 @@
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.right = null;
+    this.left = null;
+  }
+}
+
+class BST {
+  constructor() {
+    this.root = null;
+  }
+
+  insert(value) {
+    let newNode = new Node(value);
+
+    if (this.root == null) {
+      this.root = newNode;
+      return this;
+    } else {
+      // find the root
+      let currentNode = this.root;
+
+      while (true) {
+
+        // traverse the left /////
+        if (value < currentNode.value) {
+          // if there is no node, then set newNode to it
+          if (currentNode.left == null) {
+            currentNode.left = newNode;
+            return this;
+          } else {
+            // if there is a node above already, then we move to current pointer 
+            currentNode = currentNode.left
+          }
+        }
+
+        // traverse the left /////
+
+        else {
+          // if there is no right node, set newNode to it
+          if (currentNode.right == null) {
+            currentNode.right = newNode;
+            return this;
+          }
+          // if node exist already, then move the current pointer
+          else {
+            currentNode = currentNode.right;
+          }
+        }
+
+      }
+    }
+  }
+
+  search(value) {
+    if (this.root == null) {
+      return false; // no tree
+    }
+    // identify the root and set current to it
+    let currentNode = this.root;
+    let found = false;
+    while (currentNode && !found) {
+      // traverse the tree to the left
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if(value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else {
+        found = true;
+      }
+    }
+    if(!found){
+      console.log('Not found', value)
+      return false;
+    }
+    console.log('found', value)
+    return true;
+  }
+
+  
+}
+
+let newBST = new BST();
+newBST.insert(10);
+newBST.insert(5);
+newBST.insert(2);
+newBST.insert(13);
+newBST.insert(15);
+newBST.insert(16)
+newBST.insert(7);
+newBST.search(7); // should return true;
+newBST.search(4); // should return false;
+console.log(newBST)
+
+
+// manually adding nodes without method
+// newBST.root = new Node(10);
+// newBST.root.right = new Node(16);
+// newBST.root.left = new Node(8);
+// newBST.root.left.left = new Node(6);
+// newBST.root.left.right = new Node(9);
+
