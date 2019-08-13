@@ -1,0 +1,27 @@
+def binary_search(arr,val,start,end):
+
+  # linear search
+  # for i in range(0,len(arr)):
+  #   if(arr[i] == val):
+  #     print(i)
+  #     return i
+
+  # binary search 
+  # three var: start, end, min, and uses recursion 
+  if end is None:
+    end = len(arr) -1
+  mid = int((start + end)/2)
+
+  
+
+  # three conditional statements, if greater than and if less than, base case if equal to
+  if val == arr[mid]:
+    print(mid)
+    return mid
+  if val < arr[mid]:
+    return binary_search(arr,val,start,mid-1)  # noticed the mid point is used as the new endpoint
+  if val > arr[mid]:
+    return binary_search(arr,val,mid+1,end)
+    
+
+binary_search([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97],67,0,None)

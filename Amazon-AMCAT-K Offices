@@ -1,0 +1,51 @@
+// K Nearest Post Offices
+
+// Objective: Find k offices near me & return a list of all post offices available
+
+// [x,y]  x & y are integer coordinates
+
+// Pythagorean Theorem  (2D formula)
+// d= sqrt ( (x2-x1)^2 + (y2 - y1)^2 )  // d here is the distance from point a to b
+// d = SquareRoot((m - p) * (m - p) + (n - q) * (n - q))
+// ref: http://rosalind.info/glossary/euclidean-distance/
+
+function nearestOffice(home, offices, k) {
+
+  // offices are an array of arrays
+  // we will want to iterate to each element in the array
+  // input it into the Pythagorean formula to calculate the list
+  // compare the distances and return the k offices
+  let temp = 0;
+  let minD = Infinity;
+  let distances = [];
+  let dict = {};
+  let topThree = [];
+
+  for (let i = 0; i < offices.length; i++) {
+
+    // Pythagorean formula
+    let d = Math.sqrt((home[0] - home[1]) * (home[0] - home[1]) + (offices[i][0] - offices[i][1]) * (offices[i][0] - offices[i][1]));
+
+    // dict[d] = [offices[i][0], offices[i][1]]        
+
+    offices[i].push(d)
+    // distances.push(d);
+  }
+  // console.log(offices)
+
+  // sort offices based on the last element of the array
+  offices.sort((function(index) {
+    return function(a, b) {
+      return (a[index] === b[index] ? 0 : (a[index] < b[index] ? -1 : 1));
+    };
+  })(2)); // 2 is the index
+
+  let closestOffices = offices.slice(0,k);
+
+  for(let j = 0; j < closestOffices.length; j++){
+    closestOffices[j].pop();
+  }
+  console.log(closestOffices)
+}
+nearestOffice([0, 0], [[-16, 5], [-1, 2], [4, 3], [10, -2], [0, 3], [-5, -9]]
+  , 3)

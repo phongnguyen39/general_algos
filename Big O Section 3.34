@@ -1,0 +1,27 @@
+function compressBoxesTwice(boxes){
+  boxes.forEach(function(boxes) {
+    console.log(boxes);
+  });
+
+  boxes.forEach(function(boxes){
+    console.log(boxes);
+  });
+
+}
+
+// O(2n) => O(n) correct
+
+function compressBoxesTwice(boxes, boxes2){  // notices the two inputs
+  boxes.forEach(function(boxes) {
+    console.log(boxes);
+  });
+
+  boxes2.forEach(function(boxes){ // notices the two inputs
+    console.log(boxes);
+  });
+
+}
+
+// O(2n) => O(n) would be incorrect
+// O(a + b) => since they are looping two separate items; not the same
+

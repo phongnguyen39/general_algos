@@ -1,0 +1,88 @@
+// Queue  FIFO ////////////////////////////////////////
+
+// Waitlist:
+// Matt --> Joy --> Samir --> Pavel
+
+class Node{
+  constructor(value){
+    this.value = value;
+    this.next = null;
+  }
+}
+
+//FIFO, enqueue and dequeue happens from opposite ends
+class Queue {
+  constructor(){
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+  }
+
+  lookup() {
+
+  }
+
+  // adds item
+  enqueue(value) {
+    // we're going to instantiate a new Node
+    // we're going to set that newNode to the this.first & this.last position of queue
+    // if there is already a head, then set this.last.next to the newNode
+    // then set the newNode to be the last position
+  
+    const newNode = new Node(value);
+    if(!this.first){
+      this.first = newNode;
+      this.last = newNode;
+    }
+    this.last.next = newNode;
+    this.last = newNode;
+    this.length++;
+    return this;
+  }
+
+  // removes item FIFO, removes the first item
+  dequeue() {
+    // checks to see if there is anything in the queue
+    if(!this.first){
+      return false;
+    } 
+    
+    // checks to see if there is only one node in the queue
+    if(this.first == this.last){
+      this.last = null;
+    }
+
+    // To remove the first item, 
+    // set the this.first to a temp variable
+    // we must set this.first to this.first.next
+    // set the temp variable to null
+    else {
+
+      // dequeue can happen with a temp variable
+      // let firstHolder = this.first;
+      // this.first = this.first.next;
+      // firstHolder = null;
+      
+      // dequeue can happen without a temp variable
+      this.first = this.first.next;
+
+      this.length--;
+      return this;
+      
+    }
+  }
+
+  peek() {
+    return this.first;
+  }
+}
+
+const newQueue = new Queue();
+console.log(newQueue);
+newQueue.enqueue('Matt')
+newQueue.enqueue('Joy')
+newQueue.enqueue('Samir')
+console.log(newQueue);
+newQueue.dequeue();
+console.log(newQueue);
+

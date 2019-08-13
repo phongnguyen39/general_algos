@@ -1,0 +1,14 @@
+// Log all possible pairs of array
+const boxes = [1,2,3,4,5]
+const boxes = ['a,b','c','d','e']
+
+// answer nested for loop, because we want to compare first item with each subsequent item, and then the second item with each subsequent item
+
+function logAllPairsofArray(array){
+  for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array.length; j++){
+      console.log(arr[i],arr[j])
+    }
+  } 
+}
+logAllPairsofArray(boxes);

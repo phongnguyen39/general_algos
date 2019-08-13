@@ -1,0 +1,99 @@
+// Stack ////////////////////////////////////////
+
+// Browser history stack:  
+// google, 
+// udemy, 
+// youtube
+
+// you press the back button, how would we traverse it?
+// Expected, Google would be removed first, then Udemy, then youtube
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null
+  }
+}
+
+//LIFO, push and pop happens from same end
+class Stack {
+  constructor() {
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
+  }
+
+  // This is O(n) and requires traversing
+  lookup() {
+
+  }
+
+  push(value) {
+    // new node goes added to the top of the stack?
+    // first new node add to the bottom of the stack.  If there is a bottom then add to the top
+    const newNode = new Node(value);
+    if (this.length == 0) {
+      this.top = newNode;
+      this.bottom = newNode;
+    } else {
+
+      // swappin' we use the topPointer to hold the node as we reassign the top to the new node 
+      const topPointer = this.top;
+      this.top = newNode;
+      this.top.next = topPointer;
+    }
+    this.length++;
+    return this;
+  }
+
+  pop() {
+    // remove the item from the top.  
+    //We can do that by set null, and setting the element below as the new top
+
+    // parameter check
+    if (!this.top) {
+      return false;
+    }
+
+    // This condition clears the stack completely by removing this.bottom
+    if (this.top === this.bottom) {
+      console.log('\n*****Stack is be cleared*****\n');
+      this.bottom = null;
+    }
+
+    // swappin' we 
+    const topPointer = this.top;
+    this.top = this.top.next;
+    this.length--;
+    return this;
+  }
+
+  // sees the top element of the stack
+  peek() {
+    console.log("Peek: ", this.top.value);
+    return this.top;
+  }
+
+  // Checks if there is anything in the stack
+  isEmpty() {
+    if (this.length == 0) {
+      return 'empty';
+    } else {
+      return this.length;
+    }
+  }
+}
+
+const newStack = new Stack();
+console.log(newStack.isEmpty())
+newStack.push('youtube');
+newStack.push('udemy');
+newStack.push('google');
+newStack.peek();
+console.log(newStack)
+newStack.pop();
+newStack.pop();
+console.log(newStack)
+newStack.pop();
+console.log(newStack)
+

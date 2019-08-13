@@ -1,0 +1,95 @@
+// Google interview notes:
+
+// If you are given a collection of numbers, is there a pair that matches the target number?
+
+[1,2,3,9]  // sum 8, no
+[1,2,4,4]  // sum 8, yes
+
+// Framing questions:
+// are numbers integers?  floating points
+// are they sorted?
+// proposed that we use nested for loops but it quadratic in a binary search... there is a better way
+// better way... search from both ends of the array, check, then move pointers to the center if target not found
+// consider creatinga  custom object, use this, but return boolean if found.  Interviewee asked the interviewer what was the preference
+// will there be empty elements in collection?
+
+// What if the collection is not sorted?
+// We could sort the array then continue with the previous algo.   But that's not the best way
+// Instead of sorting, if target is 8 and element is 1, return the compliment 8 - 1 = 7
+// Use a hashtable? Yeah... unorder_set<int> in C++
+// If compliment shows up twice, then it returns true
+// hashtable represents underflow - means that it does not fully utilize memory
+
+// Would you do anything differently if there were 10M elements in the array?
+// hashtable, may overflow.  Could break up the array in chunks and run in parallel then merge them
+
+const arr1 = ['a','b','c','x']
+const arr2 = ['z','x','x']  // true
+
+// ways to break the code using inputs
+// const arr2 = ['j','k','f']  // false
+// const arr1 = ['a',1,'c','x']
+// const arr1 = [1.5,1,{},'s']
+
+// Using nested for-loops (not preferred)  ////////////////////////////////////
+
+function containsCommonItem(arr1, arr2){
+  for(let i = 0; i < arr1.length; i++){
+    for(let j = 0; j < arr2.length; j++){
+      if(arr1[i] == arr2[j]){
+        return true;
+      }
+    }
+  }
+  return false;
+}
+// containsCommonItem(arr1, arr2)  // O(n^2) no, it is O(a*b) which is still not efficient
+
+// Using hashtable ////////////////////////////////////////////////////////////////////////
+// 1) We convert array1 to an object, and then we only have to loop through array2 
+// array1 => object {
+// a: true, 
+// b: true, 
+// c: true, 
+// x: true
+// }
+// array2[index] === object.properties
+
+function containsCommonItem2(arr1,arr2){
+  // loop through first array and create object where properties === items in the array
+  // loop through second array and check if item in second array exists on created object
+  // *** there are still two loops, but they aren't nested O(a*b) => O(a+b)
+  let map = {}
+
+
+  // the first loop could be modularized to be a helper function
+  for(let i = 0; i < arr1.length; i++){
+    if(!map[arr1[i]]){     // checks if map doesn't exist already
+      const item = arr1[i];  // adds array item to object
+      map[item] = true;   // assigns added item a truthy 
+    }
+  }
+  for(let j = 0; j < arr2.length; j++){
+    if(map[arr2[j]]){
+      return true;
+    }
+
+  }
+  return false;
+}
+// containsCommonItem2(arr1,arr2)
+
+// Third attempt that makes it more readable using JS pre-built functions //////////
+// This may be the best if readability is important. 
+
+function containsCommonItem3(arr1,arr2){
+  return arr1.some(item => arr2.includes(item))
+}
+containsCommonItem3(arr1,arr2)
+
+// Space Complexity of three approaches:
+// Solution 1 - O(1)
+// Solution 2 - O(a)
+// Solution 3 - O(a)
+
+

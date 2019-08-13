@@ -1,0 +1,19 @@
+// Find the first tweet from Twitter and the last tweet
+// Find 1st, Find nth...
+
+const array = ['hi','my','teddy'];
+array[0]; // O(1)
+array[array.length-1]; // O(1)
+
+// Next instruction, compare dates of each tweet (think nested loops when comparing one item with the one next to it)
+// O(n^2) => think about a better way to either store the data or algorithm that makes it less expensive
+
+const array = [
+  {tweet:'hi', date:2012},
+  {tweet:'my', date:2014},
+  {tweet:'ted, datedy':2018}
+  ];
+array[0]; // O(1)
+array[array.length-1]; // O(1)
+
+'helsdkfjaslwejiasjdkasjdkflasdf'.length // Big O depends on the coding language and how .length works.    In Javascript, it is O(1)

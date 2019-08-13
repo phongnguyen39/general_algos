@@ -1,0 +1,15 @@
+function booo(n){
+  for(let i = 0; i < n.length; i++){
+    console.log('booo')
+  }
+}
+booo([1,2,3,4,5])  // O(n) time complexity; O(1) space complexity
+
+function arrayOfHintTImes(n) {
+  let hiArray = [];  // New data structure
+   for(let i = 0; i < n; i++){
+    console.log('hi');   // Fills array with items which grows n times
+  }
+  return hiArray;
+}
+arrayOfHintTImes(6)  // O(n) time complexity; O(n) space complexity
