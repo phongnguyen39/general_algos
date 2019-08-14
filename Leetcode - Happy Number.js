@@ -7,40 +7,43 @@
 // if never reaches 1 then false 
 
 var isHappy = function (n) {
-    if (n < 0 || n === null) {
+    if ( n < 1 || n === null) {
         return false;
     }
 
     let sum = 0;
+    let answers = {};
+    let nStr = n.toString().split('');
 
-    // let nStr = n.toString().split('');
-    // console.log(nStr)
 
-    let i = 0;
-    while (i != 20) {
+    while (sum != 1) {
         let sum = 0;
 
-        
-        nStr = n.toString().split('');
-        // console.log('Nstr', nStr)
-        
         for (let j = 0; j < nStr.length; j++) {
             let integer = parseInt(nStr[j])
-            
             sum = sum + integer * integer;
-            // sum = sum + Math.pow(integer,2);
-
+            
+            
         }
+        if(!answers[sum]){
+            answers[sum] = 1;
+        } else {
+            answers[sum] +=1;
+            if(answers[sum] >1) {
+                console.log('looooppppp')
+                return false;
+            }
+        }
+        if (sum === 1) {
+            console.log(true)
+            return true;
+        } 
         nStr = sum.toString().split('');
-        console.log('Sum: ', sum, 'nStr:', nStr)
-        // nStr = sum;
-
-        i++;
+        console.log(answers)
     }
-    // if (sum == 1) {
-    //     return true;
-    // }
 
     return false;
 }
-isHappy(19) // true
+// isHappy(19) // true
+isHappy(2) // true
+// isHappy(7) // true
