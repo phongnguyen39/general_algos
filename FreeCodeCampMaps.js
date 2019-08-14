@@ -4,19 +4,6 @@ let sizeof = require('object-sizeof')
 
 let arr = ['a','b','c']
 
-// MAP ////////////////////////////////////////
-let newMap = new Map();
-// adding array elements to Map
-let h = 0;
-while(arr.length > h){
-    newMap.set(arr[h], 1);
-    h++;
-}
-
-console.log('***********************************')
-console.log('Bytes Map: ',sizeof(newMap))
-console.log(newMap)
-
 // DICTIONARY ////////////////////////////////////////
 let newDict = {};
 
@@ -28,21 +15,35 @@ while(arr.length > i) {
 }
 
 console.log('***********************************')
-console.log('Bytes Map: ',sizeof(newMap),'\n', 'Bytes Dict: ',sizeof(newDict),'\n','Bytes Set: ',sizeof(newSet))
+console.log(Object.keys(newDict))
+console.log('Bytes Dict: ',sizeof(newDict))
 console.log(newDict)
+console.log('Accessed: ', newDict['a'])
+
+// MAP ////////////////////////////////////////
+let newMap = new Map();
+// adding array elements to Map
+let h = 0;
+while(arr.length > h){
+    newMap.set(arr[h], 1);
+    h++;
+}
+
+console.log('***********************************')
+console.log(Object.keys(newMap)) // returns empty array
+console.log('Bytes Map: ',sizeof(newMap))
+console.log(newMap)
+console.log('Accessed: ', newMap.has('a'))
 
 // SET ////////////////////////////////////////
 let newSet = new Set();
 let k = 0;
 while(arr.length > k) {
-    newSet.add([arr[k]]);
+    newSet.add(arr[k]);
     k++;
 }
 
 console.log('***********************************')
-
- 
-
-console.log('Bytes Map: ',sizeof(newMap),'\n', 'Bytes Dict: ',sizeof(newDict),'\n','Bytes Set: ',sizeof(newSet))
-console.log('***********************************')
-console.log(newMap,'\n\n', newDict,'\n\n',newSet)
+console.log(Object.keys(newSet)) // returns empty array 
+console.log('Bytes Set: ',sizeof(Object.keys(newSet)))
+console.log(newSet)
