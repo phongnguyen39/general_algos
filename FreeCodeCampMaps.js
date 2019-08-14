@@ -1,6 +1,9 @@
 let sizeof = require('object-sizeof')
 
 // Comparing different JS Objects
+// MAP - respects order, stores key:value, keys can be objects & primiatives
+// DICT - does not respect order, stores key:value, keys can only be primitives
+// Set - stores only unique keys
 
 let arr = ['a','b','c']
 
