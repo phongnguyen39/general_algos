@@ -2,8 +2,7 @@
  * initialize your data structure here.
  */
 var MinStack = function() {
-    this.top = null;
-      this.bottom = null;  
+     this.stack = [];
   };
   
   /** 
@@ -11,73 +10,44 @@ var MinStack = function() {
    * @return {void}
    */
   MinStack.prototype.push = function(x) {
-  let newNode = new Node(x);    
-      if (!this.bottom) {
-          this.top = newNode;
-          this.bottom = newNode;
-          return this;
-      }
-    
-      
-      let newTop = this.top;
-      this.top = newNode;
-      this.top.next = newTop;
-  
+    this.stack.push(x);
       return this;
   };
   
   /**
    * @return {void}
    */
+
+   
   MinStack.prototype.pop = function() {
-          if (!this.top) {
-          return false;
-      }
-  
-      // edge case, clears the stack completely
-      if (this.top === this.bottom) {
-          this.top = null;
-          this.bottom = null;
-          return this;
-      }
-  
-      // just set the top to top.next which is null
-      this.top = this.top.next;
+       
+    this.stack.pop();
       return this;
   };
   
   /**
    * @return {number}
    */
-  MinStack.prototype.top = function() {
-      if (!this.top) {
-          return false;
-      }
-      
-      return this.top.value;  
+  MinStack.prototype.peek = function() {
+//   MinStack.prototype.top = function() {
+        // top is the last item added 
+        this.stack[this.stack.length -1];
+        console.log(this.stack[this.stack.length -1])
+      return this;  
   };
   
   /**
    * @return {number}
    */
   MinStack.prototype.getMin = function() {
-          if(!this.bottom) {
-          return false;
-      }
-  
-      let min = Infinity;
-      let currentNode = this.top;
-      
-  
-      // the way the stack is built, it traverses from top to bottom
-      while(currentNode != null) {
-          
-          if(currentNode.value < min) {
-              min = currentNode.value;
-          }
-          currentNode = currentNode.next; 
-      }
-      
+    
+    let min = Infinity;
+    
+    for(let i = 0; i < this.stack.length; i++) {
+        if(this.stack[i] < min) {
+            min = this.stack[i];
+        }
+    }
       return min;
   };
   
@@ -89,3 +59,17 @@ var MinStack = function() {
    * var param_3 = obj.top()
    * var param_4 = obj.getMin()
    */
+
+  let newStack = new MinStack();
+
+  newStack.push(2);
+  newStack.push(-3);
+  newStack.push(0);
+  newStack.push(-3);
+  newStack.push(-3);
+  newStack.push(-40);
+  newStack.pop();
+  newStack.peek(); // this should be top, not peek, but it must be a protected word
+  newStack.getMin();
+  
+  console.log(newStack)
