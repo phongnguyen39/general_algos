@@ -54,12 +54,12 @@ function spellingBeeSolutions(wordlist, puzzles) {
     console.log(output);
     return output;
 }
-// spellingBeeSolutions(
-//     ['APPLE', 'PLEAS', 'PLEASE'],
-//     ['AELWXYZ', 'AELPXYZ', 'AELPSXY', 'SAELPXY', 'XAELPSY']) // [0,1,3,2,0]
 spellingBeeSolutions(
     ['APPLE', 'PLEAS', 'PLEASE'],
-    ['AELWXYZ']) // [0,1,3,2,0]
+    ['AELWXYZ', 'AELPXYZ', 'AELPSXY', 'SAELPXY', 'XAELPSY']) // [0,1,3,2,0]
+// spellingBeeSolutions(
+//     ['APPLE', 'PLEAS', 'PLEASE'],
+//     ['AELWXYZ']) // [0,1,3,2,0]
 
 // we can do a simple check if all letters in wordlist are in the puzzle
 // check if key letter from puzzle is present in word list
