@@ -23,12 +23,44 @@ class SLL {
         this.tail = newNode;
         return;
     }
+
+    removeNth(n){
+        let count = 0;
+        
+        let currentNode = this.head;
+        while(currentNode != null){
+            count++;
+            currentNode = currentNode.next;
+        }
+        
+        // after we get the count, we subtract n from it to find stop position
+        let removeNode = count - n;
+        // console.log(removeNode, count, n)
+        let runner = this.head;
+        let runner1 = runner.next;
+
+        // what if we set the n to be .next.next.next?
+        let arr = []
+        while(runner1 != null){
+            if(runner.val == removeNode){
+                // console.log('Runner',runner.val, 'Runner1', runner1.val)
+                runner.next = runner1.next;
+            }
+            arr.push(runner.val)   
+            runner = runner.next;
+            runner1 = runner1.next;  
+        }
+        console.log(arr)
+        return this.head;
+    }
 }
 
 let sll = new SLL();
 sll.append(1);
-sll.append(2);
-sll.append(3);
-sll.append(4);
-sll.append(5);
+// sll.append(2);
+// sll.append(3);
+// sll.append(4);
+// sll.append(5);
+sll.removeNth(1);
 console.log(sll)
+
