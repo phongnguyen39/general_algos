@@ -38,39 +38,33 @@ class SLL {
             return true;
         }
 
-        let fast = head;
-        let slow = head;
+        // if(this.head.val === this.tail.val && this.length == 2){
+        //     return true;
+        // }
 
-        while (fast.next !== null && fast.next.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        let count = 0;
+        let seenBefore = 0;
+        let currentNode = this.head;
 
-        }
-        let rev = reverse(slow);
-
-        while (head != null && rev != null) {
-            if (this.head.val !== rev.val) {
-                return false
+        while (currentNode != null) {
+            count++;
+            if (dict[currentNode.val] == null) {
+                
+                dict[currentNode.val] = currentNode.val;
+                currentNode = currentNode.next;
+                
+            } else {
+                seenBefore++;
+                currentNode = currentNode.next;
             }
-            head = head.next;
-            rev = rev.next;
         }
-        return true;
-
         
-    }
-    reverse(head){
-        let current = head;
-        let prev;
-        let next;
-        while(current!==null){
-            next = current.next;
-            current.next = prev;
-            prev = current
-            current = next;
-        }     
-        head = prev;
-        return head;
+        if (seenBefore / count == .5 || count ==1 || seenBefore / count == (1/3)) {
+            console.log(true)
+            return true;
+        }
+        console.log(false)
+        return false;
     }
 }
 
@@ -78,8 +72,9 @@ let sll = new SLL();
 
 sll.append(1)
 sll.append(0)
-sll.append(0)
+sll.append(1)
 // sll.append(2)
 // sll.append(2)
 // sll.append(1);
 sll.isPalindrome()
+console.log(sll)
