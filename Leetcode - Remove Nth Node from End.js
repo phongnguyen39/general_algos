@@ -32,10 +32,15 @@ class SLL {
             count++;
             currentNode = currentNode.next;
         }
+
+        if(this.head.val == n && count == 1) {
+            this.head = null;
+            return head;
+        }
         
         // after we get the count, we subtract n from it to find stop position
-        let removeNode = count - n;
-        // console.log(removeNode, count, n)
+        let removeNode = count - n+1;
+        console.log(removeNode, count, n)
         let runner = this.head;
         let runner1 = runner.next;
 
@@ -43,7 +48,7 @@ class SLL {
         let arr = []
         while(runner1 != null){
             if(runner.val == removeNode){
-                // console.log('Runner',runner.val, 'Runner1', runner1.val)
+                console.log('Runner',runner.val, 'Runner1', runner1.val)
                 runner.next = runner1.next;
             }
             arr.push(runner.val)   
@@ -57,10 +62,10 @@ class SLL {
 
 let sll = new SLL();
 sll.append(1);
-// sll.append(2);
+sll.append(2);
 // sll.append(3);
 // sll.append(4);
 // sll.append(5);
-sll.removeNth(1);
+sll.removeNth(2);
 console.log(sll)
 
