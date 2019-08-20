@@ -51,6 +51,17 @@
 // console.log('Bytes Set: ',sizeof(Object.keys(newSet)))
 // console.log(newSet)
 
+// Creating a generic Object using Object.create()
+// let obj = Object.create(null);
+// console.log(obj)
 
-let obj = Object.create(null);
-console.log(obj)
+// // HASH TABLE ////////////////////////////////////////
+
+let newHash = [];
+newHash.push({"Phantom":1})
+newHash.push({"Menance":1})
+newHash.push({"Cherry":1})
+console.log(newHash)
+newHash[0]['Phantom'] = 300
+console.log(newHash)
+console.log(newHash[0]['Phantom'])
