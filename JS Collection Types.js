@@ -56,6 +56,7 @@
 // console.log(obj)
 
 // // HASH TABLE ////////////////////////////////////////
+// Uses an array of objects
 
 let newHash = [];
 newHash.push({"Phantom":1})
