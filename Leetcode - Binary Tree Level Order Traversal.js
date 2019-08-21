@@ -41,18 +41,30 @@ class BST {
 
     }
 
-    convertArrToBST(arr){
-        let mid = Math.floor(arr.length/2);
-        newNode = new Node(arr[mid]);
-        if(arr.splice(0,mid).length>0){
-            newNode.left = this.convertArrToBST(arr.splice(0,mid));
-        }
-        if(arr.splice(mid+1).length > 0){
-            newNode.right = this.convertArrToBST(arr.splice(mid+1))
-        }
-        return newNode;
-    }
+    // convertArrToBST(arr){
+    //     let mid = Math.floor(arr.length/2);
+    //     let newNode = new Node(arr[mid]);
+    //     if(arr.splice(0,mid).length>0){
+    //         newNode.left = this.convertArrToBST(arr.splice(0,mid));
+    //     }
+    //     if(arr.splice(mid+1).length > 0){
+    //         newNode.right = this.convertArrToBST(arr.splice(mid+1))
+    //     }
+    //     return newNode;
+    // }
+
+    
+
+
 }
 
 let newBST = new BST();
-console.log(newBST.convertArrToBST([3,9,20,null,null,15,7]));
+newBST.insert(3)
+newBST.insert(9)
+newBST.insert(20)
+newBST.insert(null)
+newBST.insert(null)
+newBST.insert(15)
+newBST.insert(7)
+console.log(newBST)
+// console.log(newBST.convertArrToBST([3,9,20,null,null,15,7]));
