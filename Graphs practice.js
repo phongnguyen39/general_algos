@@ -31,4 +31,17 @@ class Graph {
 
 let graph = new Graph();
 graph.addVertex('John');
+graph.addVertex('Mary');
+graph.addVertex('Peter');
+graph.addVertex('Jasper');
+graph.addVertex('Elton');
+graph.addVertex('Judge');
+graph.addEdge('John', 'Mary');
+graph.addEdge('Peter', 'Jasper');
+graph.addEdge('Jasper', 'Elton');
+graph.addEdge('John','Judge');
+graph.addEdge('Mary','Judge')
+graph.addEdge('Peter','Judge')
+graph.addEdge('Jasper','Judge')
+graph.addEdge('Elton','Judge')
 console.log(graph)
