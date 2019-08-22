@@ -57,22 +57,39 @@ class BST {
         return this.isValidBST(node.left) && this.isValidBST(node.right)
     }
 
+    traverse() {
+        function helper(node){
+            //this is the base case where you return when you are on the null of a leaf node
+            if(node == null) return;
+            //this is where preorder logic should go
+
+            helper(node.left);
+            //this is where in order logic should go
+            helper(node.right);
+            //this is where postorder logic should go
+            console.log("This is inorder traversal", node.val);
+ 
+        }
+        helper(this.root);
+    }
+
     
 }
 let bst = new BST() // true
 let bst2 = new BST(); // false
+bst.insert(5);
+bst.insert(2);
+
 bst.insert(1);
-bst.insert(1);
-// bst.insert(3);
+bst.insert(3);
 bst.isValidBST(this.root);
 console.log(bst.isValidBST(this.root))
 
 
-// bst2.insert(5);
-// bst2.insert(1);
-// bst2.insert(4);
-// bst2.insert(3);
-// bst2.insert(6);
+bst.insert(7);
+bst.insert(8);
+bst.insert(6);
 // console.log(bst)
+bst.traverse();
 
 // BST.isValidBST()
