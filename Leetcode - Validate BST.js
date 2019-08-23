@@ -64,10 +64,12 @@ class BST {
             //this is where preorder logic should go
 
             helper(node.left);
-            //this is where in order logic should go
+            //this is where in order logic should go 
+            // [1,2,3,4,5,6,7,8]
+            console.log("This is inorder traversal", node.val);
             helper(node.right);
             //this is where postorder logic should go
-            console.log("This is inorder traversal", node.val);
+            
  
         }
         helper(this.root);
@@ -79,17 +81,14 @@ let bst = new BST() // true
 let bst2 = new BST(); // false
 bst.insert(5);
 bst.insert(2);
-
 bst.insert(1);
 bst.insert(3);
-bst.isValidBST(this.root);
-console.log(bst.isValidBST(this.root))
-
-
 bst.insert(7);
 bst.insert(8);
 bst.insert(6);
-// console.log(bst)
 bst.traverse();
 
+
+// bst.isValidBST(this.root);
+// console.log(bst.isValidBST(this.root))
 // BST.isValidBST()
