@@ -27,7 +27,20 @@ var uniqueMorseRepresentations = function(words) {
             morseLookup+=lookup[words[j][k]];
         }
         transformed.push(morseLookup)
+        morseLookup = '';   
     }
-    console.log(count, transformed)
+    
+    console.log(transformed)
+
+
+    // if(transformed.length == 0) {
+    //     transformed.push(morseLookup)
+    // } else {
+    //     transformed = morseLookup;
+    // }
+    // if(morseLookup != transformed[j]) {
+    //     count++;
+    // }
+    // console.log(count, transformed)
 };
 uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]);
