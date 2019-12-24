@@ -1,0 +1,27 @@
+var reverseString = function(s) {
+    // we want to reverse the reverse
+    
+    
+
+    //we can pop() and then unshift 
+    // for(let i = 0; i < s.length-1; i++){
+      
+    //   s.unshift(s.pop())
+    //   console.log(i, s)
+    // }
+
+    // we could go from left to right, swapping front corresponding
+    for(let i = 0; i < s.length /2 ; i++){
+      let temp = s[s.length-i-1];
+      s[s.length-i-1] = s[i];
+      s[i] = temp;
+      console.log(i, s)
+    }
+
+    console.log(s)
+
+
+    // simplest solution using built in function
+    // console.log(s.reverse())
+};
+reverseString(["h","e","l","l","o"]);
