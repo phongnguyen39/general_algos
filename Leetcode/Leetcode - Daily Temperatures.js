@@ -15,17 +15,27 @@ let dailyTemperatures =(T)=>{
 
     for(let i = 0; i<T.length; i++){
         let days = 0;
-        for(let j = i+1; j<T.length; j++){
-            // console.log(T[i], T[j])
+        console.log("*****")
+        for(let j = i+1; j<=T.length; j++){
             let diff = T[j] - T[i]
-            console.log(diff)
+            console.log(T[j], T[i],diff)
             days++;
+
+            console.log(typeof diff === NaN)
+
+            
             if( diff >0){
                 // console.log(diff)
                 output.push(days)
                 break;
-            } else if( diff < 0 && j == T.length-1){
+            } else if( diff <0 && j == T.length-1){
                 output.push(0)
+                console.log('happened')
+                // no future day that warmer
+            }
+            else if( typeof diff == NaN && j == T.length-1){
+                output.push(0)
+                console.log('happened')
                 // no future day that warmer
             }
         }
