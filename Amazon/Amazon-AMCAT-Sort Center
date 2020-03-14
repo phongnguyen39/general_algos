@@ -1,0 +1,43 @@
+// sort center -> load trucks
+
+// there are finite rooms & spaces => space units (int) (su)
+// diff trucks have diff space units
+
+// each package takes up a defined su
+
+// objective: find two packages that fit into a truck from a list of packages.   Find pair that utilizes the space most effectively
+// implement a rule that the truck has to hold a reserve 30 su for safety (buffer) // truckUnit - 30
+
+// packages will have a unique id;
+
+
+
+function amznSortCenter(truckSpace,packageSpace){
+
+  // nested for loop to test out the different pairs.  the pairs could be non-adjacent
+  // condition will check for truckSpace - 30
+  // push the index of the pair that satisfies the condition to an output array 
+  // output truckSpace = packageSpace[index1,index2] - 30;
+  let outputArray = [];
+
+  for(let i = 0; i < packageSpace.length; i++){
+    // example:  i of 0 will test  1:10, 1:25, 1: 35
+    
+
+    for(let j = i+1; j < packageSpace.length; j++){
+      let availableSpace = truckSpace - 30;
+      let packageTotal = packageSpace[i] + packageSpace[j]
+      // console.log('packageTotal = ', packageTotal)
+      
+      // console.log(outputArray)
+      
+      if(availableSpace == packageTotal){
+        // console.log(i,j, packageSpace[i], packageSpace[j], '=',packageSpace[i] + packageSpace[j])
+        
+        outputArray.push(i,j);
+      }
+    }
+  }
+  console.log(outputArray)
+}
+amznSortCenter(90, [1,10,25,35,60]) // [2,3] => 25+35 = 60   

@@ -1,9 +1,0 @@
-# Write your MySQL query statement below
-# UPDATE salary SET sex,  we have to swap m and f, but how can we do this at the same time?
-
-UPDATE salary 
-SET sex = Case 
-WHEN sex = 'm' THEN 'f'
-WHEN sex = 'f' THEN 'm'
-END
-WHERE sex = 'f' or sex = 'm'
